@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proporsal</title>
+    <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/f597c42206.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="./css/jquery.signaturepad.css">
+
+
+
+</head>
+<body>
+    
+
+  <nav>
+    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist" style=" margin: 20px 0px;">
+     
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">PDF PREVIEW</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">FORM PREVIEW</a>
+
+    </div>
+    
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+      <!------------NAVBAR HEADING----------->
+      <!-- As a heading -->
+      <nav class="navbar ">
+         <h1 class="text-center">ONE PAGE PROPOSAL</h1>
+        </nav>
+      
+      <div class="container">
+      <!------------CLIENT INFO----------->
+      <!--          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com" target="_blank">Title</a>------>
+      <h5 style="color: #e74c3c; margin-top: 25px; font-weight: 600; font-size: 18px;">CLIENT INFORMATION</h5>
+      <div class="row box1">
+        <div class="col-md-6">
+        <div class="name">
+             <span data-bind="text: FirstName" >aaaa</span>&nbsp<span data-bind="text: LastName">bbbb</span>
+       
+        </div>
+      
+        <div class="email"><br>
+          <a data-bind="text: Email"  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to="  class="emails"></a>
+
+        </div>
+      
+        <div class="phone">
+          <span data-bind="text: AreaCode" >aaaa</span>&nbsp<span data-bind="text: Phone">bbbb</span>
+        </div>
+      
+        </div>
+      
+        <div class="col-md-6">
+          <div class="company_name">
+            <p data-bind="text: CompanyName" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eligendi.</p>
+          </div>
+      
+          <div class="address">
+            <span data-bind="text: Address" >aaaa</span>&nbsp<span data-bind="text: Address2">bbbb</span>
+          </div>
+          <div class="address_2">
+            <span data-bind="text: City" >aaaa</span>&nbsp<span data-bind="text: Province">bbbb</span>&nbsp<span data-bind="text: Postal">bbbb</span>
+          </div>
+        
+        </div>
+      
+      
+      </div>
+      
+      <!--------------------PROJECT DETAILS-------------->
+      <h5 style="color: #e74c3c; margin-top: 25px; font-weight: 600; font-size: 18px;">PROJECT DETAILS</h5>
+      <div class="row box1 box2">
+        <div class="col-md-6">
+        <div class="project_details">
+       <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="project_details-1"  >&nbsp; Project Title</d></i> 
+          <p class="all_project_details" data-bind="text: ProjectTitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus similique ipsum totam molestias alias voluptatem quisquam tenetur natus eaque magni?</p>
+        </div>
+      
+        <div class="proposal_details">
+          <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="proposal_details-1"  >&nbsp;Proposal Details</d></i> 
+          <p class="all_proposal_details" data-bind="text: ProposalDetails" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, totam?</p>
+        </div>
+      
+        
+      
+        </div>
+      
+        <div class="col-md-6">
+          <div class="project_details">
+            <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="project_duration-1"  >&nbsp;Project Duration</d></i> 
+            <p class="all_project_details" data-bind="text: ProjectDuration">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus similique ipsum totam molestias alias voluptatem quisquam tenetur natus eaque magni?</p>
+          </div>
+        
+          <div class="proposal_details">
+            <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="proposal_objective"  >&nbsp;What are the objective of the proposal ?</d></i> 
+            <p class="all_proposal_details" data-bind="text: Objective">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, totam?</p>
+          </div>
+        
+          
+        
+          </div>
+      
+      
+      
+          <!-----------------------------TABLES AREA----------------------------->
+      
+          <div class="form-group col-md-6 " style="margin-top: 60px;">
+            <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="parts_equipments"  >&nbsp;Parts and Equipment</d></i> 
+            <table style="margin-top: 20px;" id="mytable">
+              <thead>
+              <tr>
+                <td>Item Description</td>
+                <td>Price($)</td>
+                <td>Quantity</td>
+                <td>Amount</td>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-column="First Name" data-bind="text: itemdescription">James</td>
+                  <td data-column="Last Name" id="showprice" data-bind="text: price">Matman</td>
+                  <td data-column="Twitter" id="showquantity" data-bind="text: quantity">@james</td>
+                  <td data-column="Twitter" id="showresult" >@james</td>
+            
+                </tr>
+                <tr>
+                  <td data-column="First Name" data-bind="text: itemdescription2">Andor</td>
+                  <td data-column="Last Name" data-bind="text: price2">Nagy</td>
+                  <td data-column="Job Title" data-bind="text: quantity2">Designer</td>
+                  <td data-column="Twitter" id="showresult2">@james</td>
+           
+                </tr>
+                <tr>
+                  <td data-column="First Name" data-bind="text: itemdescription3">Tamas</td>
+                  <td data-column="Last Name" data-bind="text: price3">Biro</td>
+                  <td data-column="Twitter" data-bind="text: quantity3">@james</td>
+                  <td data-column="Twitter" id="showresult3">@tamas</td>
+               
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+      
+      
+          <!-----------------------------TABLES AREA----------------------------->
+      
+          <div class="form-group col-md-6 " style="margin-top: 60px;">
+            <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="parts_equipments"  >&nbsp;Labour & Costs</d></i> 
+            <table style="margin-top: 20px;" id="mytable">
+              <thead>
+              <tr>
+                <td>Position</td>
+                <td>Hour</td>
+                <td>Rate($)</td>
+                <td>Amount</td>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-column="First Name" data-bind="text: item_description_1">James</td>
+                  <td data-column="Last Name"  data-bind="text: price_1">Matman</td>
+                  <td data-column="Twitter"  data-bind="text: quantity_1">@james</td>
+                  <td data-column="Twitter" id="showresult_1" >@james</td>
+            
+                </tr>
+                <tr>
+                  <td data-column="First Name" data-bind="text: item_description_2">Andor</td>
+                  <td data-column="Last Name" data-bind="text: price_2">Nagy</td>
+                  <td data-column="Job Title" data-bind="text: quantity_2">Designer</td>
+                  <td data-column="Twitter" id="showresult_2">@james</td>
+           
+                </tr>
+                <tr>
+                  <td data-column="First Name" data-bind="text: item_description_3">Tamas</td>
+                  <td data-column="Last Name" data-bind="text: price_3">Biro</td>
+                  <td data-column="Twitter" data-bind="text: quantity_3">@james</td>
+                  <td data-column="Twitter" id="showresult_3">@tamas</td>
+               
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+      
+      
+      <!-------Blank Column---------------->
+      <div class="col-md-6">
+      
+      </div>
+      <!-------------------------------Budget Column---------------->
+      <div class="col-md-6" style="margin-top: 130px;">
+        <div class="budget text-right">
+          <i class="fas fa-key text-warning" > <d style="color: black; font-weight: 600; font-family: sans-serif;" class="estimated_budget"  >&nbsp;Estemated Budget($)</d></i> 
+        <p data-bind="text: Budget" value="$" id="estbudget1" >114$</p>
+        </div>
+      </div>
+      
+      
+      
+      </div>
+      
+      <!----------------------------Approved Section---------------------------------->
+      
+      <div class="row" style="margin-top: 25px;">
+        <div class="col-md-6">
+          <div class="approved">
+        <h6 style="color: black; font-weight: 600; font-family: sans-serif; ">Approved By</h6>
+        <span data-bind="text: ApprovedFirstName" >aaaa</span>&nbsp<span data-bind="text: ApprovedLastName">bbbb</span>
+      </div>
+        </div>
+      
+        <!-------------------
+        <div class="col-md-6">
+          <div class="approved">
+        <h6 style="color: black; font-weight: 600; font-family: sans-serif; ">Approver's Signature</h6>
+        <p class="text-secondary" style=" font-size: 18px; " data-bind="text: approversignature" class="wwww" ></p>
+        
+      </div>
+        </div>
+      
+     --------------------->
+      
+        <div class="col-md-6" style="margin-bottom: 160px;">
+          <div class="da_te">
+            <h6 style="color: black; font-weight: 600; font-family: sans-serif; ">Date Signed</h6>
+            <d class="text-secondary form_date " style=" font-size: 18px; " >12/07/2020 </d>
+          </div>
+        </div>
+      
+      
+      </div>
+      
+      
+      
+      
+       </div>
+      
+      
+      </div>
+      <!----------------------------------------------------FORM PREVIEW-------------------------------------------------------------->
+  <!----------------------------------------------------FORM PREVIEW-------------------------------------------------------------->
+
+
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="background" style="background-color: rgba(128, 128, 128, 0.089); padding: 50px 0px;">
+        
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-9" style="background-color: white; padding: 40px 20px; margin: 50px 0px; ">
+
+              <!-- As a heading -->
+      <nav class="navbars ">
+        <h1 class="text-center" style="color: rgba(0, 0, 0, 0.671); font-weight: 700; font-size: 30px; border-bottom: 1px solid rgba(128, 128, 128, 0.247); padding-bottom: 20px;">One Page Proposal Template</h1>
+       </nav>
+
+
+       <form name="ali" onsubmit="return signup()" id="form"  style="margin-top: 40px;">
+        <div class="container">
+
+
+        <!---------Clients Details-------->
+        <div id="mains">
+        <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;">Client's Name</label>
+        <div class="form-row">
+          <div class="form-group col-sm-2">
+            <div class="inputbox">
+            <input type="text" class="form-control-sm" id="firstname" autocomplete="off" data-bind="value: FirstName" ><br>
+            <label for="" class="lower_label">FirstName</label>
+            <span id="text"></span>
+          </div>
+          </div>
+
+
+          <div class="form-group col-sm-3">
+            <div class="inputbox1">
+           
+            <input type="text"  id="lastname"  autocomplete="off" data-bind="value: LastName" ><br>
+            <label for="" class="lower_label">LastName</label>
+            <span id="text2"></span>
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+        <!---------Clients Email-------->
+        <div id="mains">
+        <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Client's Email</label>
+        <div class="form-row">
+          <div class="form-group col-sm-5">
+            <div class="inputbox1">
+           
+            <input type="email" style="width: 100%" autocomplete="off" data-bind="value: Email" id="email"><br>
+            <label for="" class="lower_label" >example@example.com</label>
+            <span id="text2"></span>
+          </div>
+          </div>
+        </div>
+        </div>
+        <!---------Clients Phone-------->
+        <div id="mains">
+        <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;">Client's Phone Number</label>
+        <div class="form-row">
+       
+          <div class="form-group col-md-1">
+            <div class="inputbox">
+            <input type="tel" class="form-control-sm" autocomplete="off"  data-bind="value: AreaCode"  id="phone"><br>
+            <label for="" class="lower_label">Area Code</label>
+            <span id="text"></span>
+          </div>
+          </div>
+-
+
+          <div class="form-group col-sm-3">
+            <div class="inputbox1">
+           
+            <input type="number"  id="lastname" autocomplete="off" data-bind="value: Phone"  ><br>
+            <label for="" class="lower_label">Phone Number</label>
+            <span id="text2"></span>
+          </div>
+          </div>
+
+        </div>
+        </div>
+
+        
+          <!---------Company Name-------->
+          <div id="mains">
+          <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Company Name</label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <div class="inputbox1">
+             
+              <input type="email" id="lastname" style="width: 100%" autocomplete="off" data-bind="value: CompanyName" ><br>
+              <label for="" class="lower_label"></label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+          </div>
+
+          <!---------Address-------->
+          <div id="mains">
+          <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Address</label>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="inputbox1">
+             
+              <input type="text" id="lastname" style="width: 100%" id="address1" autocomplete="off"  data-bind="value: Address"><br>
+              <label for="" class="lower_label">Street Address</label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="inputbox1">
+             
+              <input type="text" id="lastname" style="width: 100%"  id="address2" autocomplete="off" data-bind="value: Address2"><br>
+              <label for="" class="lower_label">Street Address line 2</label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+             <!---------city-------->
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <div class="inputbox1">
+             
+              <input type="text" id="lastname" style="width: 100%" id="city"autocomplete="off" data-bind="value: City" ><br>
+              <label for="" class="lower_label">City</label>
+              <span id="text2"></span>
+            </div>
+            </div>
+                <!---------Province-------->
+            <div class="form-group col-md-3">
+              <div class="inputbox1">
+             
+              <input type="text" id="lastname" style="width: 100%" id="province" autocomplete="off" data-bind="value: Province"><br>
+              <label for="" class="lower_label">State Province</label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+             <!---------Postal Code------->
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <div class="inputbox1">
+             
+              <input type="number" id="lastname" style="width: 100%" id="postalcode" autocomplete="off" data-bind="value: Postal"><br>
+              <label for="" class="lower_label">Postal Zip Code</label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div style="border: 1px solid rgba(128, 128, 128, 0.192); margin: 20px 0px;"></div>
+
+
+          <!--------------project title--------------->
+          <div id="mains">
+          <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Project Title</label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <div class="inputbox1">
+             
+              <input type="email" id="lastname" style="width: 100%" id="projecttitle" autocomplete="off" data-bind="value: ProjectTitle"><br>
+              <label for="" class="lower_label"></label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+          </div>
+
+
+          <!--------------project duration--------------->
+          <div id="mains">
+          <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Project Duration</label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <div class="inputbox1">
+             
+              <input type="text" id="projectduration" style="width: 100%" id="projectduration" autocomplete="off" data-bind="value: ProjectDuration"><br>
+              <label for="" class="lower_label"></label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+          </div>
+          <!--------------Proporsal Details--------------->
+          <div id="mains">
+          <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Proposal Details</label>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="inputbox1">
+             
+              <textarea name="" id="" cols="30" rows="4" style="width: 100%;  border: 1px solid rgba(128, 128, 128, 0.479);" id="proposaldetails" data-bind="value: ProposalDetails"></textarea>
+              <label for="" class="lower_label"></label>
+              <span id="text2"></span>
+            </div>
+            </div>
+          </div>
+          </div>
+
+            <!--------------Objective--------------->
+            <div id="mains">
+            <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >What are the objective of proposal</label>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="inputbox1">
+               
+                <textarea name="" id="" cols="30" rows="4" style="width: 100%;  border: 1px solid rgba(128, 128, 128, 0.479); " id="objective" data-bind="value: Objective"></textarea>
+                <label for="" class="lower_label"></label>
+                <span id="text2"></span>
+              </div>
+              </div>
+            </div>
+            </div>
+  
+                <!--------------TABLE AREA--------------->
+                <div id="mains">
+            <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Parts And Equipments</label>
+<div class="form-row">
+  <div class="form-group col-md-6">
+   
+      <table  cellpadding="4" cellspacing="0" class="form-matrix-table mytable" style="width:500px" data-component="matrix" >
+        <thead>
+          <tr>
+            <th scope="col" style="visibility: hidden;">#</th>
+            <th scope="col">Item Description</th>
+            <th scope="col">Price($)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="">
+            <th scope="row" scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">1</th>
+            <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: itemdescription"></td>
+            <td> <input type="number" autocomplete="off" class="form-control-sm" id="price" data-bind="value: price"></td>
+            <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity" data-bind="value: quantity"></td>
+            <td><input type="text" class="form-control-sm" autocomplete="off" id="result" readonly ></td>
+          </tr>
+          <tr>
+            <th scope="row" >2</th>
+            <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: itemdescription2"></td>
+            <td> <input type="number"  class="control-form-sm" autocomplete="off" id="price2" data-bind="value: price2"></td>
+            <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity2" data-bind="value: quantity2"></td>
+            <td><input type="text" class="form-control-sm" autocomplete="off" id="result2" readonly></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: itemdescription3"></td>
+            <td> <input type="number"  class="control-form-sm" autocomplete="off" id="price3" data-bind="value: price3" ></td>
+            <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity3" data-bind="value: quantity3"></td>
+            <td><input type="text" class="form-control-sm" autocomplete="off" id="result3" readonly></td>
+          </tr>
+          
+        </tbody>
+      </table>
+ </div>
+</div>
+
+                </div>
+
+                <!--------------TABLE AREA--------------->
+                <div id="mains">
+                <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Labour Cost</label>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                   
+                      <table  cellpadding="4" cellspacing="0" class="form-matrix-table mytable" style="width:500px" data-component="matrix" >
+                        <thead>
+                          <tr>
+                            <th scope="col" style="visibility: hidden;">#</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Hour</th>
+                            <th scope="col">Rate($)</th>
+                            <th scope="col">Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="">
+                            <th scope="row" scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">1</th>
+                            <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: item_description_1"></td>
+                            <td> <input type="number" autocomplete="off" class="form-control-sm" id="price_1" data-bind="value: price_1"></td>
+                            <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity_1" data-bind="value: quantity_1"></td>
+                            <td><input type="text" class="form-control-sm" autocomplete="off" id="result_1" readonly ></td>
+                          </tr>
+                          <tr>
+                            <tr class="">
+                              <th scope="row" scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">1</th>
+                              <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: item_description_2"></td>
+                              <td> <input type="number" autocomplete="off" class="form-control-sm" id="price_2" data-bind="value: price_2"></td>
+                              <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity_2" data-bind="value: quantity_2"></td>
+                              <td><input type="text" class="form-control-sm" autocomplete="off" id="result_2" readonly ></td>
+                            </tr>
+                            <tr class="">
+                              <th scope="row" scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">1</th>
+                              <td><input type="text" class="form-control-sm" autocomplete="off" data-bind="value: item_description_3"></td>
+                              <td> <input type="number" autocomplete="off" class="form-control-sm" id="price_3" data-bind="value: price_3"></td>
+                              <td><input type="number" autocomplete="off" class="form-control-sm" id="quantity_3" data-bind="value: quantity_3"></td>
+                              <td><input type="text" class="form-control-sm" autocomplete="off" id="result_3" readonly ></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                 </div>
+                </div>
+                </div>
+                
+
+
+
+
+
+   <!--------------Eastimated Budget-------------->
+   <div id="mains">
+   <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Estimated Budget</label>
+   <div class="form-row">
+     <div class="form-group col-md-4">
+       <div class="inputbox1">
+      
+       <input type="text"  style="width: 100%" id="estbudget"  autocomplete="off" readonly  class="form-control-sm"><br>
+       <label for="" class="lower_label"></label>
+       <span id="text2"></span>
+     </div>
+     </div>
+   </div>
+   </div>
+
+     <!--------------Approved Budget-------------->
+     <div id="mains">
+     <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Approved By</label>
+     <div class="form-row">
+       <div class="form-group col-md-2">
+         <div class="inputbox1">
+        
+         <input type="text" id="lastname" style="width: 100%" id="afirstname" autocomplete="off"  data-bind="value: ApprovedFirstName" ><br>
+         <label for="" class="lower_label">FirstName</label>
+         <span id="text2"></span>
+       </div>
+       </div>
+
+       <div class="form-group col-md-3">
+        <div class="inputbox1">
+       
+        <input type="text" id="lastname" style="width: 100%" id="alastname" autocomplete="off"  data-bind="value: ApprovedLastName"><br>
+        <label for="" class="lower_label">LastName</label>
+        <span id="text2"></span>
+      </div>
+      </div>
+
+     </div>
+     </div>
+
+     
+     
+
+            <!--------------Approver Signature-------------
+            <div id="mains">
+            <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Approver Signature</label>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="inputbox1">
+               
+                  <div class="sigPad" id="smoothed" style="width:404px;">
+    
+                    <div class="sig sigWrapper" style="height:auto;">
+                    <div class="typed"></div>
+                    <canvas class="pad" width="400" height="150" data-bind="value: approversignature"></canvas>
+                    <input type="hidden" name="output" class="output"  >
+                    </div>
+                    <ul class="sigNav">
+                      <li class="clearButton"><a href="#clear">Clear</a></li>
+                      </ul>
+                    </div>
+                   
+              
+           
+              
+                <span id="text2"></span>
+              </div>
+              </div>
+            </div>
+            </div>
+-->
+     <!--------------Date------------
+     <div id="mains">
+     <label for="" style=" color: rgba(0, 0, 0, 0.712); font-weight: 600; font-family: sans-serif; margin-top: 30px; font-size: 14px;" >Date Signed</label>
+     <div class="form-row">
+       <div class="form-group col-md-4">
+         <div class="inputbox1">
+        
+         <input type="date"  style="width: 100%" class="date" data-bind="date: birthDay"><br>
+         <label for="" class="lower_label">Date</label>
+         <span id="text2"></span>
+       </div>
+       </div>
+     </div>
+  </div>-->
+
+
+        
+              
+        </div>
+        <button type="submit" class="btn btn-secondary "  style="position: relative; left: 40%; background-color: rgba(128, 128, 128, 0.212); color: rgba(0, 0, 0, 0.685); padding: 8px 20px; outline: gray; border: 1px solid rgba(128, 128, 128, 0.253);" >Submit</button>
+      </div>
+      </form>
+      
+
+
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    </div>
+    
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA==" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script src="./js/jquery.signaturepad.js"></script>
+    <script src="./js/json2.min.js"></script>
+
+
+
+    <script>
+
+
+
+
+       
+
+
+
+
+
+    </script>
+</body>
+</html>
